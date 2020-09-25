@@ -98,7 +98,7 @@ while choice != 'q':
     
     # Respond to the user's choice.
   if choice == '1': 
-
+        choice2=''
         while choice2 != 'q':
         # Requests by Date menu
           print("\n[1] Enter 1 for Requests by Date")
@@ -109,13 +109,6 @@ while choice != 'q':
           choice2 = input("\nWhat would you like to see?")
 
           if choice2 == '1':
-            print("\nRequests per day: ", list(days_count.items()),"\n")
-        
-          elif choice2 == '2':
-            print("Requests per Week: ", list(weeks_count.items()),"\n")
-        
-          elif choice2 == '3':
-            print("Requests per Month: ", list(months_count.items()),"\n")
             for x,y in sorted (days_dict.items()):
               print("\n On ",x," we had ",y," requests\n")
         
@@ -126,6 +119,7 @@ while choice != 'q':
           elif choice2 == '3':
             for x,y in sorted (months_dict.items()):
               print("\n On ",x," we had ",y," requests\n")
+        
           elif choice2 == 'q':
             print("\n")
 
